@@ -7,8 +7,9 @@
   <title>网站主目录索引</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+      font-family: 'Poppins', sans-serif;
+      background: url('https://source.unsplash.com/random/1920x1080?technology') no-repeat center center fixed;
+      background-size: cover;
       margin: 0;
       padding: 0;
       display: flex;
@@ -16,51 +17,97 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     h1 {
-      color: #555;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-      font-size: 36px;
-      margin-bottom: 30px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      font-size: 48px;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: slideDown 1s 0.5s ease forwards;
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     ul {
       list-style-type: none;
       padding: 0;
-      width: 350px;
-      background-color: rgba(255, 255, 255, 0.8);
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      width: 400px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      opacity: 0;
+      animation: fadeInUp 1s 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     li {
-      padding: 15px 25px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      transition: background-color 0.3s ease;
+      padding: 20px 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      transition: background-color 0.4s ease, transform 0.4s ease;
     }
 
     li:last-child {
       border-bottom: none;
     }
 
+    li:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
     a {
       text-decoration: none;
-      color: #0099cc;
-      font-size: 20px;
-      transition: color 0.3s ease, transform 0.3s ease;
+      color: #fff;
+      font-size: 24px;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     a:hover {
-      color: #007799;
-      transform: translateX(5px);
+      color: #ccc;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     }
 
-    /* 鼠标点击效果 */
     a:active {
-      transform: translateY(2px);
+      transform: translateY(3px);
     }
   </style>
 </head>
