@@ -2,60 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网站主目录索引</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #E3EDCD;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网站主目录索引</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
+    h1 {
+      color: #555;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            width: 300px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      width: 350px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
 
-        li {
-            padding: 10px 15px;
-            border-bottom: 1px solid #ddd;
-        }
+    li {
+      padding: 15px 25px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
 
-        a {
-            text-decoration: none;
-            color: #007bff;
-            transition: color 0.3s ease;
-        }
+    li:last-child {
+      border-bottom: none;
+    }
 
-        a:hover {
-            color: #0056b3;
-        }
-    </style>
+    a {
+      text-decoration: none;
+      color: #0099cc;
+      font-size: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      color: #007799;
+      transform: translateX(5px);
+    }
+
+    /* 鼠标点击效果 */
+    a:active {
+      transform: translateY(2px);
+    }
+  </style>
 </head>
 
 <body>
-    <h1>网站主目录索引</h1>
-    <ul>
-        <li><a href="/others/calc/">计算器</a></li>
-        <li><a href="/others/win12/desktop.html">win12网页版</a></li>
-        <li><a href="/assets/mcscratch.exe">mcscratch版</a></li>
-    </ul>
+  <h1>网站主目录索引</h1>
+  <ul>
+    <li><a href="/others/calc/calc.html">计算器</a></li>
+    <li><a href="/others/win12/desktop.html">win12 网页版</a></li>
+    <li><a href="/assets/mcscratch.exe">mcscratch 版</a></li>
+  </ul>
 </body>
 
 </html>
